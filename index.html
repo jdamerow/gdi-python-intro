@@ -34,12 +34,205 @@
       </div>
       <p class="lead">A short summary of the functions, operators, and commands we discuss in class.</p>
 
-      <table>
+		<h3>Terminal</h3>
+      <table class="table">
 
         <tr>
-          <td>Command</td><td>Description</td><td>Example</td>
+          <th>Command</th><th>Description</th><th>Example</th>
         </tr>
-        
+
+        <tr>
+          <td><code>pwd</code></td><td>Prints the current directory.</td><td><code>pwd</code></td>
+        </tr>
+
+        <tr>
+          <td><code>ls</code></td><td>Lists the contents of the current directory.</td><td><code>ls</code></td>
+        </tr>
+
+        <tr>
+          <td><code>cd</code></td><td>Changes the current directory. Can be called with the name of a subdirectory of the current folder or <code>..</code> to go one folder up. (You can also use absolute paths or longer relative path.)</td><td><code>cd ..</code> (goes one folder up)<br><code>cd test</code> (goes into the folder test that is located in the current directory)</td>
+        </tr>
+
+        <tr>
+          <td><code>cat</code></td><td>Prints the contents of a file. Should be called with the name of the file to print.</td><td><code>cat test.py</code></td>
+        </tr>
+
+        <tr>
+          <td><code>mkdir</code></td><td>Creates a new directory. Takes the name of the new folder as an argument.</td><td><code>mkdir myNewFolder</code></td>
+        </tr>
+
+        <tr>
+          <td><code>python</code></td><td>If called without a parameter, the python shell is started. If called with a file name of a python script, the script is executed.</td><td><code>python</code> (Starts the python shell.)<br><code>python myScript.py</code> (Executes the script myScript.py.)</td>
+        </tr>
+
+      </table>
+
+      <h3>Python</h3>
+
+      <p>Check out the <a href="https://docs.python.org/3.5/library/index.html">Python Standard Library</a> for more functions and methods.</p>
+
+      <h4>Operators</h4>
+      <table class="table">
+
+        <tr>
+          <th>Operator</th><th>Description</th><th>Example</th>
+        </tr>
+
+        <tr>
+          <td><code>+</code></td><td>Adding two numbers, or concatenating two strings.</td><td><code>4 + 5<br>"Hello " + "World!"</code></td>
+        </tr>
+
+        <tr>
+          <td><code>-</code></td><td>Subtracting two numbers.</td><td><code>6 - 5</code></td>
+        </tr>
+
+        <tr>
+          <td><code>*</code></td><td>Multiplying two numbers or 'multiplying' a string.</td><td><code>6 * 5<br>"Hello" * 4</code></td>
+        </tr>
+
+        <tr>
+          <td><code>/</code></td><td>Dividing two numbers.</td><td><code>6 / 3</code></td>
+        </tr>
+
+        <tr>
+          <td><code>%</code></td><td>Calculates modulo of two numbers. Divides left number by right number and returns remainder</td><td><code>6 % 3</code> (Returns 0, as <code>3 * 2 + 0 = 6</code>)<br><code>8 % 3</code> (Returns 2, as <code>3 * 2 + 2 = 8</code>)</td>
+        </tr>
+
+        <tr>
+          <td><code>==</code></td><td>Compares two values and returns True if the values are equal, otherwise False.</td><td><code>"Hello" == "World"</code> (Returns False)<br><code>5 == 5</code> (Returns True)</td>
+        </tr>
+
+        <tr>
+          <td><code>!=</code></td><td>Compares two values and returns True if the values are not equal, otherwise False.</td><td><code>"Hello" != "World"</code> (Returns True)<br><code>5 != 5</code> (Returns False)</td>
+        </tr>
+
+        <tr>
+          <td><code>&gt;</code></td><td>Compares two values and returns True if the the first value is greater than the second, otherwise False.</td><td><code>9 > 8</code></td>
+        </tr>
+
+        <tr>
+          <td><code>&lt;</code></td><td>Compares two values and returns True if the the first value is smaller than the second, otherwise False.</td><td><code>5 < 8</code></td>
+        </tr>
+
+        <tr>
+          <td><code>&gt;=</code></td><td>Compares two values and returns True if the the first value is greater or equal than the second, otherwise False.</td><td><code>8 >= 8</code> (Returns True)</td>
+        </tr>
+
+        <tr>
+          <td><code>&lt;=</code></td><td>Compares two values and returns True if the the first value is smaller or equal to the second, otherwise False.</td><td><code>5 <= 8</code> (Returns True)</td>
+        </tr>
+
+        <tr>
+          <td><code>=</code></td><td>Assigning a value to a variable.</td><td><code>a = 4</code> (The variable <code>a</code> will now have the value 4.)</td>
+        </tr>
+
+      </table>
+
+      <h4>Functions</h4>
+      <table class="table">
+
+        <tr>
+          <th>Function</th><th>Description</th><th style="min-width: 270px;">Example</th>
+        </tr>
+        <tr>
+          <td><code>print()</code></td><td>Writing something to the python shell or terminal.</td><td><code>print("Hello World!")</code></td>
+        </tr>
+
+        <tr>
+          <td><code>type()</code></td><td>Returns the type of a value or variable.</td><td><code>type("Hello World!")<br>type(5)<br>type(a)</code> (Where <code>a</code> could be 1.34)</td>
+        </tr>
+
+        <tr>
+          <td><code>input()</code></td><td>Prints the text that is given to the function, waits for the user to enter some text and hit enter, then returns the input of the user.</td><td><code>input("What's your name? ")</code></td>
+        </tr>
+
+        <tr>
+          <td><code>float()</code></td><td>Tries to turn whatever argument is given to the function into a float value.</td><td><code>float("4.5")</code></td>
+        </tr>
+
+        <tr>
+          <td><code>int()</code></td><td>Tries to turn whatever argument is given to the function into an integer value.</td><td><code>int("4.5")</code></td>
+        </tr>
+
+        <tr>
+          <td><code>str()</code></td><td>Tries to turn whatever argument is given to the function into a string value.</td><td><code>str(4.5)</code></td>
+        </tr>
+
+        <tr>
+          <td><code>randint()</code></td><td>Lets you generate a randome number in a range you provide.</td><td><code>from random import randint<br>randint(1, 5)</code></td>
+        </tr>
+
+      </table>
+
+      <h4>Statements</h4>
+      <table class="table">
+
+        <tr>
+          <th style="min-width: 250px;">Keyword/Statement</th><th>Description</th><th style="min-width: 270px;">Example</th>
+        </tr>
+
+        <tr>
+          <td><code>#</code></td><td>Use this character if you want to make a comment on a piece of code. Python will ignore whatever you write after the <code>#</code> character and continue with the next line.</td><td><code># define variable<br>a = 5<br># now add one<br>a = a + 1</code></td>
+        </tr>
+
+        <tr>
+          <td><code>if <i>condition</i>:<br>&nbsp;&nbsp;&nbsp;<i>if block</i><br>elif <i>condition</i>:<br>&nbsp;&nbsp;&nbsp;<i>elif block</i><br>else:<br>&nbsp;&nbsp;&nbsp;<i>else block</i></code></td><td>Allows you to execute different code depending on a condition.</td><td><code>if a < 5:<br>&nbsp;&nbsp;&nbsp;print("a is smaller than 5")<br>elif a > 5:<br>&nbsp;&nbsp;&nbsp;print("a is greater than 5")<br>else:<br>&nbsp;&nbsp;&nbsp;print("a equals 5")</code></td>
+        </tr>
+
+        <tr>
+          <td><code>while <i>condition</i>:<br>&nbsp;&nbsp;&nbsp;<i>while block</i></code></td><td>Lets you repeat the execution of a specific code block until a the specified condition is no longer true.</td><td><code>x = 1<br>while x < 5:<br>&nbsp;&nbsp;&nbsp;print("x is " + x)<br>&nbsp;&nbsp;&nbsp;x = x + 1</code></td>
+        </tr>
+
+        <tr>
+          <td><code>for <i>element</i> in <i>elements</i>:<br>&nbsp;&nbsp;&nbsp;<i>for block</i></code></td><td>Lets you repeat the execution of a specific code block for each element in a list.</td><td><code>numbers = [1,3,5]<br>for num in numbers:<br>&nbsp;&nbsp;&nbsp;print("number is " + num)</code></td>
+        </tr>
+
+        <tr>
+          <td><code>def</code></td><td>Use this keyword to define a function.</td><td><code>def myFunc():<br>&nbsp;&nbsp;&nbsp;print("Hello World!")</code></td>
+        </tr>
+        <tr>
+          <td><code>return</code></td><td>Use this keyword to return something from a function.</td><td><code>def myFunc():<br>&nbsp;&nbsp;&nbsp;return 5</code></td>
+        </tr>
+
+        <tr>
+          <td><code>import</code></td><td>Allows you to use functions from a different Python file (module).</td><td><code>import myModule<br># now you can call the function<br>myModule.myFunc()</code></td>
+        </tr>
+
+        <tr>
+          <td><code>from <i>module</i> import <i>part</i></code></td><td>Allows you to use specific functions from a different Python file (module).</td><td><code>from myModule import myFunc<br># now you can call the function<br>myFunc()</code></td>
+        </tr>
+      </table>
+
+      <h4>Methods</h4>
+      <table class="table">
+
+        <tr>
+          <th>Method</th><th>Description</th><th>Example</th>
+        </tr>
+
+        <tr>
+          <td><code>append()</code></td><td>Is a method of lists. Appends the value you provide to the list it is called on.</td><td><code>my_list = [1, 2, 3]<br>my_list.append(4)</code> (Afterwards the list looks like: <code>[1, 2, 3, 4]</code>)</td>
+        </tr>
+
+        <tr>
+          <td><code>list[<i>i</i>]</code></td><td>Is a method of lists. Returns the <i>ith</i> element of the list <i>list</i></td><td><code>my_list = [1, 2, 3]<br>my_list[2]</code> (Returns 3. Remember that indices start at 0.)</td>
+        </tr>
+
+        <tr>
+          <td><code>keys()</code></td><td>Is a method of dictionaries. Returns all keys of the dictionary.</td><td><code>my_dict = {'one':1, 'two':2}<br>my_dict.keys()</code> (Returns: 'one, 'two')</td>
+        </tr>
+
+        <tr>
+          <td><code>values()</code></td><td>Is a method of dictionaries. Returns all values of the dictionary.</td><td><code>my_dict = {'one':1, 'two':2}<br>my_dict.values()</code> (Returns: 1, 2)</td>
+        </tr>
+
+        <tr>
+          <td><code>items()</code></td><td>Is a method of dictionaries. Returns all tuples of the dictionary in a list.</td><td><code>my_dict = {'one':1, 'two':2}<br>my_dict.items()</code> (Returns: <code>[('two', 2), ('one', 1)]</code>)</td>
+        </tr>
+
+        <tr>
+          <td><code>get()</code></td><td>Is a method of dictionaries. Returns all the value for the provided key or None if the key doesn't exist. If a default value is provided, it returns that one instead of none.</td><td><code>my_dict = {'one':1, 'two':2}<br>my_dict.get('one')</code> (Returns: 1)<br><code>my_dict.get('three', 5)</code> (Returns 5)</td>
+        </tr>
       </table>
 
       <p></p>
